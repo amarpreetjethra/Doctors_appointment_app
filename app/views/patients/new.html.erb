@@ -1,0 +1,38 @@
+<div class="form-container">
+  <h1>Add Patient</h1>
+  <hr />
+  <%= form_with(model: @patient, local: true, class: "ui form") do |f| %>
+    <div class="field">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, required: true, autofocus: true, placeholder: "First Name" %>
+    </div>
+    <div class="field">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, required: true, placeholder: "Last Name" %>
+    </div>
+    <div class="field">
+      <%= f.label "Date of Birth" %>
+      <%= f.date_field :dob, required: true, placeholder: "D.O.B." %>
+    </div>
+    <div class="field">
+      <%= f.label :sex %>
+      <%= f.select :sex, ["Male", "Female"], required: true%>
+    </div> 
+    <div class="field">
+      <%= f.label :phone %>
+      <%= f.phone_field :phone, required: true, placeholder: "Phone"%>
+    </div>
+     <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", class: "input", placeholder: "Password", required: true  %>
+    </div>
+
+    
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input", placeholder: "Confirm", required: true  %>
+    </div>
+    <%= f.submit nil, class: "ui green button inverted" %>
+  <% end %>
+</div>
+
+
+

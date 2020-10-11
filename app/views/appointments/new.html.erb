@@ -1,0 +1,51 @@
+    <% flash.each do |type, msg| %>
+      <div>
+        <h4><%= msg %></h4>
+      </div>
+    <% end %>
+
+<%if !@patients.empty? %>
+  <% if @patients[0][:users_id]!= current_user.id%>
+  <h3>You already have an appointment with this doctor! If you want to change the time, cancel this appointment and select other time slot</h3>
+
+  <%= link_to 'Back', doctor_appointments_path %>
+  <% else %>
+  <h1>New Appointment</h1>
+  <%= form_with(model: [@doctor, @appointment], local: true, class: "ui form" ) do |f| %>
+    <%= f.label :patient %>
+    <%= f.select :patient_id, @patients.collect { |p| [p.full_name, p.id] if p.users_id == current_user.id }.compact %>
+    <br />
+
+    <%= f.label :doctor_availability %>
+    <%= f.select :time, options_for_select(Availability.all.map{|s|[s.start_time.strftime("%I:%M").concat("-").concat(s.end_time.strftime("%I:%M")), s.start_time] if s.doctor_id==@doctor.id}.compact,{ include_blank: false, include_hidden: false }) %>
+
+    <br/>
+
+    <%= f.label :date %>
+    <%= f.date_field :date, :value => Time.now.strftime("%Y-%m-%d") %>
+    <br />
+    
+    <br />
+    <%= f.submit nil, class: "ui green button inverted" %>
+  <% end %>
+  <%end %>
+<% else %>
+<h1>New Appointment</h1>
+  <%= form_with(model: [@doctor, @appointment], local: true, class: "ui form" ) do |f| %>
+    <%= f.label :patient %>
+    <%= f.select :patient_id, @patients.collect { |p| [p.full_name, p.id] if p.users_id == current_user.id }.compact %>
+    <br />
+
+    <%= f.label :doctor_availability %>
+    <%= f.select :time, options_for_select(Availability.all.map{|s|[s.start_time.strftime("%I:%M").concat("-").concat(s.end_time.strftime("%I:%M")), s.start_time] if s.doctor_id==@doctor.id}.compact,{ include_blank: false, include_hidden: false }) %>
+
+    <br/>
+
+    <%= f.label :date %>
+    <%= f.date_field :date, :value => Time.now.strftime("%Y-%m-%d") %>
+    <br />
+    
+    <br />
+    <%= f.submit nil, class: "ui green button inverted" %>
+  <% end %>
+<% end %>

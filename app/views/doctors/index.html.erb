@@ -1,0 +1,41 @@
+
+
+<% if current_user.role==='doctor' %>
+<span class="doctor-show-header"><h3>Hello, <%= current_user.first_name %> <%= current_user.last_name %></h3></span>
+<%= link_to 'Add Availability', new_availability_path, class: "ui button blue inverted" %>
+<% else %>
+<span class="doctor-show-header"><h3>Hello, <%= current_user.first_name %> <%= current_user.last_name %></h3></span>
+<% end %>
+<!-- <%= link_to 'Add Doctor', new_doctor_path, class: "ui button blue inverted" %>
+<br />
+<br /> -->
+<hr />
+
+
+<table class="ui selectable celled striped table padded">
+  <thead>
+    <th class="center aligned">Name</th>
+    <th class="center aligned">Specialty</th>
+    <th class="center aligned">Phone</th>
+    <th class="center aligned">Appointments</th>
+    <th class="center aligned">Availabilities</th>
+
+    <!-- <th class="center aligned">Remove</th> -->
+  </thead>
+  <tbody>
+    <% @doc_info.each do |doctor| %>
+      <tr>
+        <td><%= link_to doctor.name, doctor_appointments_path(doctor), class: "ui basic button" , style: "background-color: #00cfff !important;" %></td>
+        <td><%= doctor.specialty %></td>
+        <td><%= doctor.phone %></td>
+        <td><%= doctor.appointments.count %></td>
+        <input type="hidden" name="doctor_id" value="<%= doctor.id %>">
+        <td><%= link_to 'Show', availability_path(doctor.id) %></td>
+        <!-- <td><%= button_to 'Remove', {:controller => :doctors, :action => 'destroy', :id => doctor.id }, :method => :delete, class:"ui button red inverted" %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+

@@ -1,0 +1,3 @@
+class DoctorMailer < ApplicationMailer
+  
+end
