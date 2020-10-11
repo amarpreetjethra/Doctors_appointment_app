@@ -26396,3 +26396,129 @@ Completed 200 OK in 424ms (Views: 421.8ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 460ms (Views: 427.2ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (637.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mAppointment Load (884.0ms)[0m  [1m[34mSELECT `appointments`.* FROM `appointments`[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mPatient Load (57.1ms)[0m  [1m[34mSELECT `patients`.* FROM `patients` WHERE `patients`.`id` = 5[0m
+  ↳ lib/tasks/cron.rake:28
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12[0m
+  ↳ lib/tasks/cron.rake:32
+ActionMailer::Base#mail: processed outbound mail in 1032.9ms
+Sent mail to amyjethra@gmail.com (2047.6ms)
+Date: Sun, 11 Oct 2020 22:30:41 +0530
+From: amyjethra@gmail.com
+To: amyjethra@gmail.com
+Message-ID: <5f833a39e0ef1_128b2b15d7a7af403851@amarpreet-Inspiron-3542.mail>
+Subject: You have an appointment with the Doc!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi, This is a reminder that you have a doctor's appointment in half an hour. Please reach on time
+  [1m[35m (604.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mAppointment Load (171.4ms)[0m  [1m[34mSELECT `appointments`.* FROM `appointments`[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT `patients`.* FROM `patients` WHERE `patients`.`id` = 5[0m
+  ↳ lib/tasks/cron.rake:28
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12[0m
+  ↳ lib/tasks/cron.rake:32
+ActionMailer::Base#mail: processed outbound mail in 108.4ms
+Sent mail to amyjethra@gmail.com (1598.7ms)
+Date: Sun, 11 Oct 2020 22:31:27 +0530
+From: amyjethra@gmail.com
+To: amyjethra@gmail.com
+Message-ID: <5f833a672c88d_14a42ae550260f38196a4@amarpreet-Inspiron-3542.mail>
+Subject: You have an appointment with the Doc!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi, This is a reminder that you have a doctor's appointment in half an hour. Please reach on time
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT `appointments`.* FROM `appointments`[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT `patients`.* FROM `patients` WHERE `patients`.`id` = 5[0m
+  ↳ lib/tasks/cron.rake:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12[0m
+  ↳ lib/tasks/cron.rake:32
+ActionMailer::Base#mail: processed outbound mail in 1531.2ms
+Sent mail to amyjethra@gmail.com (2134.9ms)
+Date: Sun, 11 Oct 2020 22:32:43 +0530
+From: amyjethra@gmail.com
+To: amyjethra@gmail.com
+Message-ID: <5f833ab32c300_15da2abaf89caf446292c@amarpreet-Inspiron-3542.mail>
+Subject: You have an appointment with the Doc!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi, This is a reminder that you have a doctor's appointment in half an hour. Please reach on time
+  [1m[35m (12.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT `appointments`.* FROM `appointments`[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT `patients`.* FROM `patients` WHERE `patients`.`id` = 5[0m
+  ↳ lib/tasks/cron.rake:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12[0m
+  ↳ lib/tasks/cron.rake:32
+ActionMailer::Base#mail: processed outbound mail in 21.6ms
+Sent mail to amyjethra@gmail.com (1430.2ms)
+Date: Sun, 11 Oct 2020 22:33:04 +0530
+From: amyjethra@gmail.com
+To: amyjethra@gmail.com
+Message-ID: <5f833ac89f673_17232aedea238f4039913@amarpreet-Inspiron-3542.mail>
+Subject: You have an appointment with the Doc!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi, This is a reminder that you have a doctor's appointment in half an hour. Please reach on time
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mAppointment Load (26.2ms)[0m  [1m[34mSELECT `appointments`.* FROM `appointments`[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT `patients`.* FROM `patients` WHERE `patients`.`id` = 5[0m
+  ↳ lib/tasks/cron.rake:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12[0m
+  ↳ lib/tasks/cron.rake:32
+ActionMailer::Base#mail: processed outbound mail in 21.9ms
+Sent mail to amyjethra@gmail.com (1451.0ms)
+Date: Sun, 11 Oct 2020 22:34:03 +0530
+From: amyjethra@gmail.com
+To: amyjethra@gmail.com
+Message-ID: <5f833b036b295_18012b17d34a0f2c170c2@amarpreet-Inspiron-3542.mail>
+Subject: You have an appointment with the Doc!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi, This is a reminder that you have a doctor's appointment in half an hour. Please reach on time
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT `appointments`.* FROM `appointments`[0m
+  ↳ lib/tasks/cron.rake:9
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT `patients`.* FROM `patients` WHERE `patients`.`id` = 5[0m
+  ↳ lib/tasks/cron.rake:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12[0m
+  ↳ lib/tasks/cron.rake:32
+ActionMailer::Base#mail: processed outbound mail in 21.7ms
+Sent mail to amyjethra@gmail.com (1409.0ms)
+Date: Sun, 11 Oct 2020 22:35:03 +0530
+From: amyjethra@gmail.com
+To: amyjethra@gmail.com
+Message-ID: <5f833b3ff2d80_19b22aff1e3faf3c10791@amarpreet-Inspiron-3542.mail>
+Subject: You have an appointment with the Doc!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi, This is a reminder that you have a doctor's appointment in half an hour. Please reach on time
