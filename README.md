@@ -1,7 +1,8 @@
 # Doctors_appointment_app
 
 Database: Mysql2
-Rails version
+Rails version 5.2.1
+Ruby Version 2.4.1
 
 Steps to run project locally:
 1. Clone the repository
