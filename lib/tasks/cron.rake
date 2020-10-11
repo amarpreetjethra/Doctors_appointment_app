@@ -37,8 +37,8 @@ namespace :cron do
 
 	     @all_patient_email.each do |account|
 	      ActionMailer::Base.mail(
-		    from: "amyjethra@gmail.com",
-		    to:"amyjethra@gmail.com",
+		    from: "Sender's email",
+		    to:"Receiver's Email",
 		    subject: "You have an appointment with the Doc!",
 		    body: "Hi, This is a reminder that you have a doctor's appointment in half an hour. Please reach on time"
 		  ).deliver
